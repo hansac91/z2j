@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+        font-family: Calibri, sans-serif; 
+        font-size: 17px;
+        background-color: rosybrown;
+        color: black;
+    }
+
+header {
+        font-size: 25px;
+        color: black;
+        text-align: center;
+        background-color: coral;
+}
+main {
+        text-align: center;
+        font-size: 15px;
+        background-color: aqua;
+    }
+     
+main ~ footer {  
+        color: black;
+        font-size: 14px;
+        background-color: white;
+    }
+
+a:hover {
+        color: yellow; 
+}

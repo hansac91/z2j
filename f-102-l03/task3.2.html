@@ -8,36 +8,34 @@
 </head>
 <body>
 <script>
-   let a =  prompt("Podaj pierwszą liczbę:");
-   let operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
-   let b = prompt("Podaj drugą liczbę:");
-
-   function Calculator(operator) 
-{
-    let a = document.getElementById('a').value;
-    let b = document.getElementById('b').value;  
+   const number1 =  prompt("Podaj pierwszą liczbę:");
+   const operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
+   const number2 = prompt("Podaj drugą liczbę:");
+   
+   const a = parseFloat(number1);
+   const b = parseFloat(number2); 
  
-    switch(operator) 
-    {
+    switch(operator) {
         case '+':
-            let result = parseFloat(a) + parseFloat(b); 
-            alert(result);        
+            alert(a + b);        
         break;
         case '-':
-            let result = parseFloat(a) - parseFloat(b);  
-            alert(result);       
+            alert(a - b);       
         break;  
-        case 'x':
-            let result = parseFloat(a) * parseFloat(b); 
-            alert(result);        
+        case '*':
+            alert(a * b);        
         break;  
-        case '/':
-            let result = parseFloat(a) / parseFloat(b);  
-            alert(result);       
-        break;    
+        case '/': 
+            if (b === 0) {
+                alert("Nie dziel przez 0 cholero!");
+            } else {
+                alert(parseInt(a) / parseInt(b));
+            }
+        break;
+        case '%': 
+        alert(parseInt(a) % parseInt(b));    
+        break;
     }
- 
- 
 
 
 </script>

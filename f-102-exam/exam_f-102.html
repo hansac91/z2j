@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   const number1 =  prompt("Podaj pierwszą liczbę:");
+   const operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
+   const number2 = prompt("Podaj drugą liczbę:");
+   
+   const a = parseFloat(number1);
+   const b = parseFloat(number2); 
+ 
+    switch(operator) {
+        case '+':
+            alert(a + b);        
+        break;
+        case '-':
+            alert(a - b);       
+        break;  
+        case '*':
+            alert(a * b);        
+        break;  
+        case '/': 
+            if (b === 0) {
+                alert("Nie dziel przez 0 cholero!");
+            } else {
+                alert(parseInt(a) / parseInt(b));
+            }
+        break;
+        case '%': 
+        alert(parseInt(a) % parseInt(b));    
+        break;
+    }
+
+
+</script>
+
+</body>
+</html>

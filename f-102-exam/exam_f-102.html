@@ -8,36 +8,69 @@
 </head>
 <body>
 <script>
-   const number1 =  prompt("Podaj pierwszą liczbę:");
-   const operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
-   const number2 = prompt("Podaj drugą liczbę:");
-   
-   const a = parseFloat(number1);
-   const b = parseFloat(number2); 
-
-   let result = true;
- 
-    switch(operator) {
-        case '+':
-            alert(a + b);        
-        break;
-        case '-':
-            alert(a - b);       
-        break;  
-        case '*':
-            alert(a * b);        
-        break;  
-        case '/': 
-            if (b === 0) {
-                alert("Nie dziel przez 0 cholero!");
-            } else {
-                alert(parseInt(a) / parseInt(b));
-            }
-        break;
-        case '%': 
-        alert(parseInt(a) % parseInt(b));    
-        break;
+    function add(a, b) {
+        return (a + b); 
     }
+
+    function substract(a, b) {
+        return (a - b); 
+    }
+
+    function multiply(a, b) {
+        return (a * b); 
+    }
+
+    function divide(a, b) {
+        if (b === 0) {
+                return ("Nie dziel przez 0 cholero!");
+            } else {
+                return (parseInt(a) / parseInt(b));
+        }
+    }
+
+    function modulo(a, b) {
+        return (a % b); 
+    }
+
+   const a =  Number(prompt("Podaj pierwszą liczbę:"));
+   const operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
+   const b = Number(prompt("Podaj drugą liczbę:"));
+   let result = 0;
+   let count = true;
+ 
+   while (count === true) {
+        if (operator) {
+            function operation() {
+                if (operator === "+"){
+                    return add(a, b); 
+                }
+                else if {
+                    if (operator === "-"){
+                    return sunstract(a, b); 
+                }
+                }   else if {
+                    if (operator === "*"){
+                    return multiply(a, b); 
+                }
+                }   else if {
+                    if (operator === "/"){
+                    return divide(a, b); 
+                }
+                }   else if {
+                    if (operator === "%"){
+                    return modulo(a, b); 
+                }
+                }
+                result = operations();
+                alert(result);
+                a = result;
+                counting === true;
+            }
+        } else {
+            counting === false;
+            break;
+        }
+   }
 
 
 </script>

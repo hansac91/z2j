@@ -24,7 +24,7 @@
         if (b === 0) {
                 return ("Nie dziel przez 0 cholero!");
             } else {
-                return (parseInt(a) / parseInt(b));
+                return (a / b);
         }
     }
 
@@ -32,42 +32,40 @@
         return (a % b); 
     }
 
-   const a =  Number(prompt("Podaj pierwszą liczbę:"));
-   const operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
-   const b = Number(prompt("Podaj drugą liczbę:"));
+   let a =  Number(prompt("Podaj pierwszą liczbę:"));
+   let operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
+   let b = Number(prompt("Podaj drugą liczbę:"));
    let result = 0;
    let count = true;
  
    while (count === true) {
+    let operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
         if (operator) {
+            let b = Number(prompt("Podaj drugą liczbę:"));
             function operation() {
                 if (operator === "+"){
                     return add(a, b); 
                 }
-                else if {
-                    if (operator === "-"){
-                    return sunstract(a, b); 
+                else if (operator === "-") {
+                    return substract(a, b); 
                 }
-                }   else if {
-                    if (operator === "*"){
+                else if (operator === "*"){
                     return multiply(a, b); 
                 }
-                }   else if {
-                    if (operator === "/"){
+                else if (operator === "/"){
                     return divide(a, b); 
                 }
-                }   else if {
-                    if (operator === "%"){
+                else if (operator === "%"){
                     return modulo(a, b); 
                 }
-                }
-                result = operations();
+            }
+                result = operation();
                 alert(result);
                 a = result;
-                counting === true;
+                count === true;
             }
-        } else {
-            counting === false;
+        else {
+            count === false;
             break;
         }
    }

@@ -22,7 +22,7 @@
 
     function divide(a, b) {
         if (b === 0) {
-                return ("Nie dziel przez 0 cholero!");
+                return ("Nie dziel przez 0 cholero! ");
             } else {
                 return (a / b);
         }
@@ -32,16 +32,16 @@
         return (a % b); 
     }
 
-   let a =  Number(prompt("Podaj pierwszą liczbę:"));
+   let a =  number(prompt("Podaj pierwszą liczbę:"));
    let operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
-   let b = Number(prompt("Podaj drugą liczbę:"));
+   let b = number(prompt("Podaj drugą liczbę:"));
    let result = 0;
    let count = true;
  
    while (count === true) {
     let operator = prompt("Podaj operator arytmetyczny (+,-,*,/ lub %)");
         if (operator) {
-            let b = Number(prompt("Podaj drugą liczbę:"));
+            let b = number(prompt("Podaj drugą liczbę:"));
             function operation() {
                 if (operator === "+"){
                     return add(a, b); 
@@ -62,7 +62,6 @@
                 result = operation();
                 alert(result);
                 a = result;
-                count === true;
             }
         else {
             count === false;
